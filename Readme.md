@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Vitalii Iashchuk](https://up.htmlacademy.ru/htmlcss/20/user/93555).
-* Наставник: `Никита Рогатнев`.
+* Наставник: [Никита Рогатнев](https://htmlacademy.ru/profile/nikita_rogatnev).
 
 ---
 
