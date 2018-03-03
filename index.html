@@ -9,7 +9,7 @@
 <div class="container">
  <header class="main-header">
  	<div class="main-header-logo">
-	    <img src="img/logo.png" width="164" height="36" alt="Логотип Device">
+	    <a href="index.html"><img src="img/logo.png" width="164" height="36" alt="Логотип Device"></a>
 	</div>
  	<div class="wrapper-header">
 
@@ -19,7 +19,7 @@
 			    <input type="button" name="submit"  value="Найти">
 		    </form>
 		    <ul>
-	        	<li class="login-link-header">Войти</li>
+	        	<li class="login-link-header"><a>Войти</a></li>
 	      	    <li><a class="compare-header" href="#">Сравнить</a></li>
 		        <li><a class="cart-header" href="#">Корзина</a></li>
 	      	</ul>
@@ -27,7 +27,7 @@
 
 		<nav class="main-navigation">
       		<ul class="site-navigation">
-	        	<li><a href="#">Каталог товаров</a>
+	        	<li><a>Каталог товаров</a>
 					<ul class="sub-menu">
 				      <li><a href="#">Виртуальная реальность</a></li>
 				      <li><a href="#">Фитнес-браслеты</a></li>
@@ -119,35 +119,43 @@
 	</section>
 
     <section class="category">
-        <div class="category-item">
-        	<img src="img/popular-1.png" alt="Изображение">
-        	<h3>Виртуальная реальность</h3>
-        </div>
-
-        <div class="category-item">
-        	<img class="selfie" src="img/popular-2.png" alt="Изображение">
-        	<h3>Моноподы для селфи</h3>
-        </div>
-
-        <div class="category-item">
-        	<img src="img/popular-3.png" alt="Изображение">
-        	<h3>Экшн-камеры</h3>
-        </div>
-
-        <div class="category-item">
-        	<img src="img/popular-4.png" alt="Изображение">
-        	<h3>Фитнес-браслеты</h3>
-        </div>
-
-        <div class="category-item">
-        	<img src="img/popular-5.png" alt="Изображение">
-        	<h3>Умные часы</h3>
-        </div>
-
-        <div class="category-item">
-        	<img src="img/popular-6.png" alt="Изображение">
-        	<h3>Квадрокоптеры</h3>
-        </div>
+		<ul class="category-list">
+			<li>
+				<a href="#">
+					<img src="img/popular-1.png" alt="Изображение">
+	        		<h3>Виртуальная реальность</h3>
+	        	</a>
+			</li>
+			<li class="selfie">
+				<a href="#">
+					<img src="img/popular-2.png" alt="Изображение">
+	        		<h3>Моноподы для селфи</h3>
+	        	</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/popular-3.png" alt="Изображение">
+	        		<h3>Экшн-камеры</h3>
+	        	</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/popular-4.png" alt="Изображение">
+	        		<h3>Фитнес-браслеты</h3>
+	        	</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/popular-5.png" alt="Изображение">
+	        		<h3>Умные часы</h3>
+	        	</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/popular-6.png" alt="Изображение">
+	        		<h3>Квадрокоптеры</h3>
+	        	</a>
+			</li>
     </section>
 
     <section class="features">
@@ -191,13 +199,16 @@
 		</div>
     </section>
 
-    <section class="brands">
-        <img src="img/brand-1.png" alt="Brand">
-        <img src="img/brand-2.png" alt="Brand">
-        <img src="img/brand-3.png" alt="Brand">
-        <img src="img/brand-4.png" alt="Brand">
-    </section>
 
+
+    <section class="brands">
+    	<ul class="device-brands">
+    		<li><img src="img/brand-1.png" alt="djj"></li>
+    		<li><img src="img/brand-2.png" alt="SP Gadgets"></li>
+    		<li><img src="img/brand-3.png" alt="GoPro"></li>
+    		<li><img src="img/brand-4.png" alt="VIVE"></li>
+    	</ul>
+    </section>
 
     <section class="our-company">
         <div class="about-us">
@@ -215,7 +226,7 @@
         <div class="contacts">
         	<h2>Контакты</h2>
         	<p>Вы можете забрать товар сами, заехав в нащ офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        	<img src="img/map.png" alt="Карта">
+        	<a href="#"><img src="img/map.png" alt="Карта"></a>
 			<a href="#">Напишите нам</a>
 		</div>
     </section>
@@ -226,7 +237,9 @@
  <footer class="main-footer">
 	<div class="wrapper-footer">
 	 	<div class="footer-logo">
-	 		<img src="img/logo-footer.png" width="164" height="36" alt="Логотип Device">
+	 		<a href="index.html"><img src="img/logo-footer.png" width="164" height="36" alt="Логотип Device"></a>
+	 	</div>
+	 	<div class="adress">
 			<p>г. Москва, ул. Строителей, 15</p>
 		</div>
 
@@ -236,11 +249,11 @@
 			        <li><a href="#">Гарантия</a></li>
 			     	<li><a href="#">Контакты</a></li>
 	      	</ul>
-	      	<div class="footer-social-links">
-				<a href="#" class="footer-facebook"></a>
-				<a href="#" class="footer-instagram"></a>
-				<a href="#" class="footer-twitter"></a>
-			</div>
+	      	<ul class="footer-social-links">
+				<li><a href="#" class="footer-facebook"></a></li>
+				<li><a href="#" class="footer-instagram"></a></li>
+				<li><a href="#" class="footer-twitter"></a></li>
+			</ul>
 		</div>
 
 
@@ -250,11 +263,15 @@
 		      	    <li><a class="compare-footer" href="#">Сравнить</a></li>
 			        <li><a class="cart-footer" href="#">Корзина</a></li>
 		    </ul>
-		    <p>Тел.: +7 (495) 495-95-95</p>
-		    <p><img src="img/logo-academy.png" width="27" height="34" alt="Логотип HTML Academy"></p>
+		    <div class="phone">
+		    	<p>Тел.: +7 (495) 495-95-95</p>
+		    </div>
+		    <div class="logo-academy">
+		    	<a><img src="img/logo-academy.png" width="27" height="34" alt="Логотип HTML Academy"></a>
+			</div>
 		</div>
 	</div>
- </footer>
+</footer>
 
 </body>
 </html>
