@@ -13,25 +13,51 @@
 }
 
 /*Подключение шрифтов*/
+
 @font-face {
-	font-family: "Gilroy - Extra Bold";
-	src: url(fonts/Gilroy-ExtraBold.ttf);
+font-family: 'Gilroy - Extra Bold';
+src: url('fonts/gilroyextrabold.woff2') format('woff2'),
+url('fonts/gilroyextrabold.woff') format('woff');
+font-weight: 400;
 }
 
 @font-face {
-	font-family: "Gilroy - Light";
-	src: url(fonts/Gilroy-Light.ttf);
+font-family: 'Gilroy - Extra Bold';
+src: url('fonts/gilroyextrabold.woff2') format('woff2'),
+url('fonts/gilroyextrabold.woff') format('woff');
+font-weight: 800;
 }
 
 @font-face {
-	font-family: "Open Sans";
-	src: url(fonts/OpenSans.ttf);
+font-family: 'Gilroy';
+src: url('fonts/gilroylight.woff2') format('woff2'),
+url('fonts/gilroylight.woff') format('woff');
+font-weight: 300;
 }
 
 @font-face {
-	font-family: "Open Sans Light";
-	src: url(fonts/OpenSans-Light.ttf);
+font-family: 'Open Sans';
+src: url('fonts/opensans.woff2') format('woff2'),
+url('fonts/opensans.woff') formmat('woff');
+font-weight: 300;
 }
+
+
+@font-face {
+font-family: 'Open Sans';
+src: url('fonts/opensans.woff2') format('woff2'),
+url('fonts/opensans.woff') format('woff');
+font-weight: 400;
+}
+
+@font-face {
+font-family: 'Open Sans Light';
+src: url('fonts/opensanslight.woff2') format('woff2'),
+url('fonts/opensanslight.woff') format('woff');
+font-weight: 300;
+}
+
+
 
 body {
 	margin: 0;
