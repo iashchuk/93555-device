@@ -7,46 +7,50 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-		<div class="container">
-			<header class="main-header">
-				<div class="main-header-logo">
-					<a><img src="img/logo.png" width="164" height="36" alt="Логотип Device"></a>
-				</div>
-				<div class="user-navigation">
-					<form action="https://echo.htmlacademy.ru" method="get">
-						<label class="visually-hidden" for="site-search">Поиск по сайту</label>
-						<input type="search" name="search" id="site-search" placeholder="Поиск по сайту">
-						<label class="visually-hidden" for="button-search"><span>Найти</span></label>
-						<input type="button" name="search-submit" id="button-search" value="Найти">
-					</form>
-					<ul class="user-menu">
-						<li><a class="login-link" href="login.html">Войти</a></li>
-						<li><a class="compare" href="#">Сравнить</a></li>
-						<li><a class="cart" href="#">Корзина</a></li>
-					</ul>
-				</div>
-				<nav class="main-navigation">
-					<ul class="site-navigation">
-						<li><a>Каталог товаров</a>
-						<input class="visually-hidden sub-menu-plus" type="checkbox" id="check-plus" >
-						<label for="check-plus">+</label>
-						<ul class="sub-menu">
-							<li><a href="#">Виртуальная реальность</a></li>
-							<li><a href="#">Фитнес-браслеты</a></li>
-							<li><a href="#">Квадрокоптеры</a></li>
-							<li><a href="catalog.html">Моноподы для селфи</a></li>
-							<li><a href="#">Умные часы</a></li>
-							<li><a href="#">Экшн-камеры</a></li>
+		<header class="main-header">
+			<div class="container">
+				<div class="page-header">
+					<div class="page-header-logo">
+						<a><img src="img/logo.png" width="164" height="36" alt="Логотип Device"></a>
+					</div>
+					<div class="user-navigation">
+						<form action="https://echo.htmlacademy.ru" method="get">
+							<label class="visually-hidden" for="site-search">Поиск по сайту</label>
+							<input type="search" name="search" id="site-search" placeholder="Поиск по сайту">
+							<label class="visually-hidden" for="button-search"><span>Найти</span></label>
+							<input type="button" name="search-submit" id="button-search" value="Найти">
+						</form>
+						<ul class="user-menu">
+							<li><a class="login-link" href="login.html">Войти</a></li>
+							<li><a class="compare" href="#">Сравнить</a></li>
+							<li><a class="cart" href="#">Корзина</a></li>
 						</ul>
-					</li>
-					<li><a href="#">Доставка</a></li>
-					<li><a href="#">Гарантия</a></li>
-					<li><a href="#">Контакты</a></li>
-				</ul>
-			</nav>
-		</header>
-		<main class="container">
-			<h1 class="visually-hidden">Магазин гаджетов «Device»</h1>
+					</div>
+					<nav class="main-navigation">
+						<ul class="site-navigation">
+							<li><a>Каталог товаров</a>
+							<input class="visually-hidden sub-menu-plus" type="checkbox" id="check-plus" >
+							<label for="check-plus">+</label>
+							<ul class="sub-menu">
+								<li><a href="#">Виртуальная реальность</a></li>
+								<li><a href="#">Фитнес-браслеты</a></li>
+								<li><a href="#">Квадрокоптеры</a></li>
+								<li><a href="catalog.html">Моноподы для селфи</a></li>
+								<li><a href="#">Умные часы</a></li>
+								<li><a href="#">Экшн-камеры</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Доставка</a></li>
+						<li><a href="#">Гарантия</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<main>
+		<h1 class="visually-hidden">Магазин гаджетов «Device»</h1>
+		<div class="container">
 			<section class="main-slider">
 				<h2 class="visually-hidden">Популярные товары</h2>
 				<input class="visually-hidden" type="radio" name="slides" id="slide-one" checked>
@@ -127,6 +131,8 @@
 								<label class="btn-control" for="slide-three">Третий слайд</label>
 							</div>
 						</section>
+					</div>
+					<div class="container">
 						<section class="category">
 							<h2 class="visually-hidden">Категории товаров</h2>
 							<ul class="category-list">
@@ -178,9 +184,9 @@
 								<input class="visually-hidden" type="radio" name="service-slide" id="service-slide-three">
 								<div class="service-name">
 									<ul class="service-list">
-										<li><a class="current-one"><label for="service-slide-one">Доставка</label></a></li>
-										<li><a class="current-two"><label for="service-slide-two">Гарантия</label></a></li>
-										<li><a class="current-three"><label for="service-slide-three">Кредит</label></a></li>
+										<li><label for="service-slide-one"><a class="current-one">Доставка</a></label></li>
+										<li><label for="service-slide-two"><a class="current-two">Гарантия</a></label></li>
+										<li><label for="service-slide-three"><a class="current-three">Кредит</a></label></li>
 									</ul>
 								</div>
 								<div class="service-slide-first">
@@ -239,7 +245,9 @@
 								</li>
 							</ul>
 						</section>
-						<section class="our-company2">
+					</div>
+					<div class="container">
+						<section class="company">
 							<h2 class="visually-hidden">Наша компания</h2>
 							<div class="our-company">
 								<div class="about-us">
@@ -262,17 +270,17 @@
 											</svg>
 											<h3>Контакты</h3>
 											<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-											<a class="map-popup" href="#"><img src="img/map.png" width="560" height="222" alt="Карта"></a>
-											<a class="our-company-link" href="#">Напишите нам</a>
+											<a class="map-popup" href="map.html"><img src="img/map.png" width="560" height="222" alt="Карта"></a>
+											<a class="our-company-link" href="form.html">Напишите нам</a>
 										</div>
 									</div>
 								</section>
-							</main>
-						</div>
+							</div>
+						</main>
 						<footer class="main-footer">
 							<div class="container">
 								<div class="top-footer">
-									<div class="main-footer-logo">
+									<div class="page-footer-logo">
 										<a>
 											<img src="img/yellow-logo.png" width="164" height="36" alt="Логотип Device">
 										</a>
@@ -318,7 +326,8 @@
 							<section class="modal modal-map">
 								<h2 class="visually-hidden">Как до нас добраться</h2>
 								<button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
-								<img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу: г. Москва, ул. Строителей, 15">
+								<!-- 	<img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу: г. Москва, ул. Строителей, 15"> -->
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1068091742814!2d37.52928540464894!3d55.6871307721568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1521640590913" width="960" height="559" style="border:0" allowfullscreen></iframe>
 							</section>
 							<section class="modal modal-message">
 								<h2 class="visually-hidden">Напишите нам</h2>
