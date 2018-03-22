@@ -29,16 +29,21 @@
 					</div>
 					<nav class="main-navigation">
 						<ul class="site-navigation">
-							<li><a>Каталог товаров</a>
-							<input class="visually-hidden sub-menu-plus" type="checkbox" id="check-plus" >
+							<li><button type="button" onclick="openCatalog()">Каталог товаров</button>
+
+							<input class="visually-hidden submenu-plus" type="checkbox" id="check-plus" >
 							<label for="check-plus">+</label>
-							<ul class="sub-menu">
+
+
+							<ul class="submenu" id="product-menu">
+
 								<li><a href="#">Виртуальная реальность</a></li>
 								<li><a href="#">Фитнес-браслеты</a></li>
 								<li><a href="#">Квадрокоптеры</a></li>
-								<li><a href="catalog.html">Моноподы для селфи</a></li>
+								<li><a>Моноподы для селфи</a></li>
 								<li><a href="#">Умные часы</a></li>
 								<li><a href="#">Экшн-камеры</a></li>
+
 							</ul>
 						</li>
 						<li><a href="#">Доставка</a></li>
@@ -83,7 +88,7 @@
 							<div class="filter-color">
 								<ul>
 									<li class="filter-option filter-checkbox">
-										<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" id="check-black" checked>
+										<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" id="check-black" checked disabled>
 										<label for="check-black">Черный</label>
 									</li>
 									<li class="filter-option filter-checkbox">
@@ -289,5 +294,8 @@
 				</ul>
 			</form>
 		</section>
+
+		 <script src="js/script.js"></script>
+
 	</body>
 </html>

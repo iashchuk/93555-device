@@ -377,6 +377,7 @@ img {
 
     width: 500px;
     margin-right: 40px;
+
 }
 
 .site-navigation > li:not(:first-child):not(:last-child)
@@ -386,17 +387,22 @@ img {
 
 .site-navigation > li:last-child
 {
-    margin-right: -3.6px;
+    margin-right: -4px;
     margin-left: auto;
 }
 
 
 /*Меню магазина - Ссылки*/
-.site-navigation a
+.site-navigation a,
+.site-navigation button
 {
     font-family: 'Gilroy', 'Arial', sans-serif;
     font-size: 18px;
     font-weight: 400;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
 
     color: #000;
 
@@ -419,18 +425,22 @@ img {
 
 /*Меню магазина - Подменю*/
 
-.sub-menu
+
+.submenu
 {
     position: absolute;
     z-index: 20;
     top: 42px;
     left: -60px;
 
+
     display: none;
 
     width: 600px;
     margin: 0;
     padding: 0;
+
+
     padding-right: 499px;
     padding-bottom: 35px;
     padding-left: 61px;
@@ -443,66 +453,28 @@ img {
 }
 
 
-input[id='check-plus']:checked ~ .sub-menu
-{
-    display: flex;
-}
-
-
-.sub-menu-plus + label
-{
-    font-size: 0;
-}
-
-
-.sub-menu-plus + label::after
-{
-    position: absolute;
-    top: 2px;
-    left: 230px;
-
-    width: 16px;
-    height: 16px;
-
-    background-image: url('../img/plus.svg');
-
-    content: '';
-    cursor: pointer;
-    transition-timing-function: linear;
-    transition-duration: .15s;
-
-    /*border: 2px solid #000000;*/
-}
-
-.sub-menu-plus:checked + label::after
-{
-    transition-timing-function: linear;
-    transition-duration: .15s;
-    transform: rotate(45deg);
-}
-
-.sub-menu li
+.submenu li
 {
     width: 160px;
     margin-right: 40px;
 }
 
-.sub-menu li:nth-child(3n+1)
+.submenu li:nth-child(3n+1)
 {
     width: 200px;
 }
-.sub-menu li:nth-child(3n+3)
+.submenu li:nth-child(3n+3)
 {
     margin-right: 0;
 }
 
-.sub-menu li:nth-child(5)
+.submenu li:nth-child(5)
 {
     margin-right: 100px;
 }
 
 
-.sub-menu a
+.submenu a
 {
     font-family: 'Open Sans', 'Arial', sans-serif;
     font-size: 15px;
@@ -515,15 +487,68 @@ input[id='check-plus']:checked ~ .sub-menu
     text-transform: none;
 }
 
-.sub-menu a:hover
+.submenu a:hover
 {
     opacity: .6;
 }
 
-.sub-menu a:active
+.submenu a:active
 {
     opacity: .3;
 }
+
+
+
+/*Открытие каталога при нажатии кнопки КАТАЛОГ ТОВАРОВ */
+.catalog-open {
+    display: flex;
+}
+
+
+
+/*Открытие каталога при нажатии символа + */
+
+input[id='check-plus']:checked ~ .submenu
+{
+    display: flex;
+}
+
+.submenu-plus + label
+{
+    font-size: 0;
+}
+
+
+.submenu-plus + label::after
+{
+    position: absolute;
+    top: 2px;
+    left: 230px;
+
+    width: 16px;
+    height: 16px;
+
+    background-image: url('../img/plus.svg');
+     opacity: 0.3;
+
+
+    content: '';
+    cursor: pointer;
+    transition-timing-function: linear;
+    transition-duration: .15s;
+
+
+}
+
+.submenu-plus:checked + label::after
+{
+    transition-timing-function: linear;
+    transition-duration: .15s;
+    transform: rotate(45deg);
+}
+
+
+
 
 
 /*Блок Слайдер*/
@@ -1703,8 +1728,8 @@ input[id='service-slide-three']:checked ~ .service-name .current-three::before
 .breadcrumbs li::after
 {
     position: absolute;
-    top: 8px;
-    right: -25px;
+    top: 9px;
+    right: -24px;
 
     display: block;
 
@@ -1736,12 +1761,12 @@ input[id='service-slide-three']:checked ~ .service-name .current-three::before
 }
 
 
-.breadcrumbs a:hover
+.breadcrumbs a:hover:not(:last-child)
 {
     opacity: .6;
 }
 
-.breadcrumbs a:active
+.breadcrumbs a:active:not(:last-child)
 {
     opacity: .1;
 }
@@ -1945,7 +1970,7 @@ input[id='service-slide-three']:checked ~ .service-name .current-three::before
 
 .range-controls .toggle-min
 {
-    left: 0;
+    left: -4px;
 }
 
 .range-controls .toggle-max
