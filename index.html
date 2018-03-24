@@ -16,9 +16,11 @@
 					<div class="user-navigation">
 						<form action="https://echo.htmlacademy.ru" method="get">
 							<label class="visually-hidden" for="site-search">Поиск по сайту</label>
-							<input type="search" name="search" id="site-search" placeholder="Поиск по сайту">
-							<label class="visually-hidden" for="button-search"><span>Найти</span></label>
-							<input type="button" name="search-submit" id="button-search" value="Найти">
+							<input class="field-search" type="search" name="search" id="site-search" placeholder="Поиск по сайту">
+
+							<label class="visually-hidden" for="button-search">Найти</label>
+							<input class="button-search" type="button" name="btn-search" id="submit-search" value="Найти" tabindex="-1">
+
 						</form>
 						<ul class="user-menu">
 							<li><a class="login-link" href="login.html">Войти</a></li>
@@ -28,7 +30,7 @@
 					</div>
 					<nav class="main-navigation">
 						<ul class="site-navigation">
-							<li><button type="button" onclick="openCatalog()">Каталог товаров</button>
+							<li class="catalog-product"><button type="button" onclick="openCatalog()">Каталог товаров</button>
 								<input class="visually-hidden submenu-plus" type="checkbox" id="check-plus" >
 								<label for="check-plus">+</label>
 								<ul class="submenu" id="product-menu">
@@ -61,7 +63,7 @@
 							<img src="img/slider-1.png" width="384" height="486" alt="Палка для селфи">
 						</div>
 						<div class="slide-description">
-							<svg width="100" height="77">
+							<svg width="100" height="78">
 								<line x1="0" y1="42" x2="100" y2="42" stroke="#ffffff" stroke-width="7"/>
 								</svg>
 								<h3>Делай селфи,<br>как Бен Стиллер!</h3>
@@ -137,40 +139,22 @@
 								<h2 class="visually-hidden">Категории товаров</h2>
 								<ul class="category-list">
 									<li>
-										<a href="#">
-											<img src="img/popular-1.svg" width="97" height="55" alt="Иконка Виртуальная реальность">
-											<h3>Виртуальная реальность</h3>
-										</a>
+										<a class="category-item virtual" href="#">Виртуальная реальность</a>
 									</li>
 									<li>
-										<a href="#">
-											<img src="img/popular-2.svg" width="86" height="117" alt="Иконка Моноподы для селфи">
-											<h3>Моноподы<br> для селфи</h3>
-										</a>
+										<a class="category-item monopods" href="catalog.html">Моноподы<br> для селфи</a>
 									</li>
 									<li>
-										<a href="#">
-											<img src="img/popular-3.svg" width="71" height="87" alt="Иконка Экшн-камеры">
-											<h3>Экшн-камеры</h3>
-										</a>
+										<a class="category-item cameras" href="#">Экшн-камеры</a>
 									</li>
 									<li>
-										<a href="#">
-											<img src="img/popular-4.svg" width="107" height="65" alt="Иконка Фитнес-браслеты">
-											<h3>Фитнес-браслеты</h3>
-										</a>
+										<a class="category-item bands" href="#">Фитнес-браслеты</a>
 									</li>
 									<li>
-										<a href="#">
-											<img src="img/popular-5.svg" width="56" height="98" alt="Иконка Умные часы">
-											<h3>Умные часы</h3>
-										</a>
+										<a class="category-item watches" href="#">Умные часы</a>
 									</li>
 									<li>
-										<a href="#">
-											<img src="img/popular-6.svg" width="132" height="69" alt="Иконка Квадрокоптеры">
-											<h3>Квадрокоптеры</h3>
-										</a>
+										<a class="category-item copters" href="#">Квадрокоптеры</a>
 									</li>
 								</ul>
 							</section>
@@ -179,43 +163,28 @@
 							<div class="container">
 								<h2 class="visually-hidden">Наши сервисы</h2>
 								<div class="services-slider">
-									<input class="visually-hidden" type="radio" name="service-slide" id="service-slide-one" checked>
-									<input class="visually-hidden" type="radio" name="service-slide" id="service-slide-two">
-									<input class="visually-hidden" type="radio" name="service-slide" id="service-slide-three">
 									<div class="service-name">
 										<ul class="service-list">
-											<li><label for="service-slide-one"><a class="current-one">Доставка</a></label></li>
-											<li><label for="service-slide-two"><a class="current-two">Гарантия</a></label></li>
-											<li><label for="service-slide-three"><a class="current-three">Кредит</a></label></li>
+											<li><a class="btn current" href="#">Доставка</a></li>
+											<li><a class="btn" href="#">Гарантия</a></li>
+											<li><a class="btn" href="#">Кредит</a></li>
 										</ul>
 									</div>
-									<div class="service-slide-first">
-										<div class="service-description">
+									<ul class="service-description">
+										<li class="service-item delivery">
 											<h2>Доставка</h2>
 											<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-										</div>
-										<div class="service-image">
-											<img src="img/delivery.svg" alt="Доставка" width="136" height="164">
-										</div>
-									</div>
-									<div class="service-slide-second">
-										<div class="service-description">
-											<h2>Гарантия</h2>
-											<p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-										</div>
-										<div class="service-image">
-											<img src="img/warranty.svg" alt="Гарантия" width="171" height="194">
-										</div>
-									</div>
-									<div class="service-slide-third">
-										<div class="service-description">
-											<h2>Кредит</h2>
-											<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-										</div>
-										<div class="service-image">
-											<img src="img/credit.svg" alt="Кредит" width="156" height="186">
-										</div>
-									</div>
+										</li>
+												<li class="service-item warranty">
+												<h2>Гарантия</h2>
+												<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
+										</li>
+										<li class="service-item credit">
+												<h2>Кредит</h2>
+												<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br> условия кредита. Выгодные для нашего банка, разумеется.</p>
+										</li>
+									</ul>
+
 								</div>
 							</div>
 						</section>
@@ -224,22 +193,22 @@
 								<h2 class="visually-hidden">Популярные производители</h2>
 								<ul class="device-brands">
 									<li>
-										<a href="#">
+										<a class="djj" href="#">
 											<img src="img/brand-1.png" width="260" height="100" alt="Логотип djj">
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a class="spgadgets" href="#">
 											<img src="img/brand-2.png" width="260" height="100" alt="Логотип SP Gadgets">
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a class="gopro" href="#">
 											<img src="img/brand-3.png" width="260" height="100" alt="Логотип GoPro">
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a class="vive" href="#">
 											<img src="img/brand-4.png" width="260" height="100" alt="Логотип VIVE">
 										</a>
 									</li>
@@ -252,7 +221,7 @@
 								<div class="our-company">
 									<div class="about-us">
 										<svg width="85" height=20>
-											<line x1="2" y1="8" x2="82" y2="8" stroke="#000000" stroke-width="7"/>
+											<line x1="0" y1="8" x2="80" y2="8" stroke="#000000" stroke-width="7"/>
 											</svg>
 											<h3>О нас</h3>
 											<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
@@ -262,16 +231,16 @@
 												<li>Автотрейдинг</li>
 												<li>ЖелДорЭкспедиция</li>
 											</ul>
-											<a class="our-company-link" href="#">Подробнее о нас</a>
+											<a class="btn our-company-link" href="#">Подробнее о нас</a>
 										</div>
 										<div class="contacts">
 											<svg width="85" height=20>
-												<line x1="2" y1="8" x2="82" y2="8" stroke="#000000" stroke-width="7"/>
+												<line x1="0" y1="8" x2="80" y2="8" stroke="#000000" stroke-width="7"/>
 												</svg>
 												<h3>Контакты</h3>
 												<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-												<a class="map-popup" href="map.html"><img src="img/map.png" width="560" height="222" alt="Карта"></a>
-												<a class="our-company-link" href="form.html">Напишите нам</a>
+												<a class="map-popup-link" href="#popup-map"><img src="img/map.png" width="560" height="222" alt="Карта"></a>
+												<a class="btn our-company-link" href="form.html">Напишите нам</a>
 											</div>
 										</div>
 									</section>
@@ -309,13 +278,13 @@
 									<div class="bottom-footer">
 										<div class="line yellow">
 											<svg width="85" height=20>
-												<line x1="0" y1="15" x2="80" y2="15" stroke="#ffc600" stroke-width="7"/>
+												<line x1="0" y1="12" x2="80" y2="12" stroke="#ffc600" stroke-width="7"/>
 												</svg>
 											</div>
 											<ul class="footer-social-links">
-												<li><a class="social-logo footer-facebook" href="#" aria-label="Facebook"></a></li>
-												<li><a class="social-logo footer-instagram" href="#" aria-label="Instagram"></a></li>
-												<li><a class="social-logo footer-twitter" href="#" aria-label="Twitter"></a></li>
+												<li><a class="social-logo footer-facebook" href="#" aria-label="Facebook"><span class="visually-hidden">Facebook</span></a></li>
+												<li><a class="social-logo footer-instagram" href="#" aria-label="Instagram"><span class="visually-hidden">Instagram</span></a></li>
+												<li><a class="social-logo footer-twitter" href="#" aria-label="Twitter"><span class="visually-hidden">Twitter</span></a></li>
 											</ul>
 											<div class="logo-academy">
 												<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-academy.svg" width="27" height="34" alt="Логотип HTML Academy"></a>
@@ -325,17 +294,12 @@
 								</footer>
 								<section class="modal modal-map">
 									<h2 class="visually-hidden">Как до нас добраться</h2>
-									<button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
-									<!-- 	<img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу: г. Москва, ул. Строителей, 15"> -->
-									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1068091742814!2d37.52928540464894!3d55.6871307721568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1521640590913" width="960" height="559" style="border:0" allowfullscreen></iframe>
+									<div id="#popup-map">
+										<button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+										<!-- 	<img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу: г. Москва, ул. Строителей, 15"> -->
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1068091742814!2d37.52928540464894!3d55.6871307721568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1521640590913" width="960" height="559" style="border:0" allowfullscreen></iframe>
+									</div>
 								</section>
-
-
-
-
-
-
-
 								<section class="modal modal-message">
 									<h2 class="visually-hidden">Напишите нам</h2>
 									<button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
@@ -359,6 +323,6 @@
 										</ul>
 									</form>
 								</section>
-								 <script src="js/script.js"></script>
+								<script src="js/script.js"></script>
 							</body>
 						</html>
