@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>Device Index</title>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/min-style.css">
 	</head>
 	<body>
 		<header class="main-header">
@@ -17,10 +17,7 @@
 						<form action="https://echo.htmlacademy.ru" method="get">
 							<label class="visually-hidden" for="site-search">Поиск по сайту</label>
 							<input class="field-search" type="search" name="search" id="site-search" placeholder="Поиск по сайту">
-
-							<label class="visually-hidden" for="button-search">Найти</label>
-							<input class="button-search" type="button" name="btn-search" id="submit-search" value="Найти" tabindex="-1">
-
+							<button class="button-search" type="submit">Найти</button>
 						</form>
 						<ul class="user-menu">
 							<li><a class="login-link" href="login.html">Войти</a></li>
@@ -165,26 +162,25 @@
 								<div class="services-slider">
 									<div class="service-name">
 										<ul class="service-list">
-											<li><a class="btn current" href="#">Доставка</a></li>
-											<li><a class="btn" href="#">Гарантия</a></li>
-											<li><a class="btn" href="#">Кредит</a></li>
+											<li><a class="btn btn-slider delivery current" href="#delivery">Доставка</a></li>
+											<li><a class="btn btn-slider warranty" href="#warranty">Гарантия</a></li>
+											<li><a class="btn btn-slider credit" href="#credit">Кредит</a></li>
 										</ul>
 									</div>
 									<ul class="service-description">
-										<li class="service-item delivery">
+										<li class="service-item delivery current" id="delivery">
 											<h2>Доставка</h2>
 											<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
 										</li>
-												<li class="service-item warranty">
-												<h2>Гарантия</h2>
-												<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
+										<li class="service-item warranty" id="warranty">
+											<h2>Гарантия</h2>
+											<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
 										</li>
-										<li class="service-item credit">
-												<h2>Кредит</h2>
-												<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br> условия кредита. Выгодные для нашего банка, разумеется.</p>
+										<li class="service-item credit" id="credit">
+											<h2>Кредит</h2>
+											<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br> условия кредита. Выгодные для нашего банка, разумеется.</p>
 										</li>
 									</ul>
-
 								</div>
 							</div>
 						</section>
@@ -323,6 +319,6 @@
 										</ul>
 									</form>
 								</section>
-								<script src="js/script.js"></script>
+								<script src="js/min-script.js"></script>
 							</body>
 						</html>

@@ -248,7 +248,7 @@ a {
 }
 
 
-.user-navigation .field-search:focus {
+.field-search:focus {
     border-bottom: 2px solid black;
     outline: transparent;
 }
@@ -258,8 +258,8 @@ a {
 
 
 /*Поиск по сайту - Кнопка "Найти"*/
-.user-navigation .button-search {
-    display: none;
+.button-search {
+    display: block;
 
     width: 85px;
     min-height: 49px;
@@ -270,33 +270,44 @@ a {
     font-weight: 300;
     line-height: 25px;
 
+    opacity: 0;
     color: #000;
     border: 2px solid #000;
     outline: none;
     background-color: transparent;
 
+    cursor: pointer;
     letter-spacing: .3px;
 }
 
 
 
-.field-search:focus ~ .button-search {
-    display: block;
+.button-search:focus {
+    opacity: 1;
+    color: #fff;
+    outline: 1px solid #4d90fe;
+    background-color: #000;
 }
-.user-navigation .button-search:hover {
+
+
+.button-search:hover {
     color: #fff;
     background-color: #000;
 }
-.user-navigation .button-search:active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: block;
 
+
+.button-search:active {
+    opacity: 1;
     color: rgba(255, 255, 255, .3);
+    background-color: #000;
 }
 
 
 
+
+.field-search:focus ~ .button-search {
+    opacity: 1;
+}
 
 
 /*Навигация пользователя - Пользовательское меню*/
@@ -305,7 +316,11 @@ a {
     display: -ms-flexbox;
     display: flex;
     justify-content: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     align-items: baseline;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
 
     width: 500px;
     margin: 0;
@@ -404,6 +419,8 @@ a {
     display: -ms-flexbox;
     display: flex;
     align-items: baseline;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
 
     width: 1040px;
     margin: 0;
@@ -465,11 +482,9 @@ a {
 
 .catalog-product:hover .submenu,
 .catalog-product:focus .submenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-
-
-
-
 }
 
 
@@ -485,7 +500,8 @@ a {
     left: -60px;
 
     display: none;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
 
     width: 600px;
     margin: 0;
@@ -498,9 +514,6 @@ a {
     background-color: #f7e296;
 
     list-style: none;
-
-
-
 }
 
 
@@ -631,13 +644,16 @@ a {
     display: -ms-flexbox;
     display: flex;
     justify-content: space-between;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
 
     min-height: 510px;
 }
 
 /*Сетка слайдера - Блок изображения слайда*/
 .slide-photo {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     width: 560px;
 
     text-align: center;
@@ -786,11 +802,14 @@ a {
 .slide-description a:hover::before {
     height: 40px;
 }
+
+/*
 .slide-description a:active::before {
     background-color: #000;
 }
+*/
 .slide-description a:active {
-    color: #f7e184;
+    color: rgba(0, 0, 0, .3);
 }
 
 
@@ -893,7 +912,7 @@ input[id="slide-three"]:checked ~ .slide-controls label[for="slide-three"] {
 input[id="slide-one"]:focus ~ .slide-controls label[for="slide-one"],
 input[id="slide-two"]:focus ~ .slide-controls label[for="slide-two"],
 input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
-    outline: 2px auto #4d90fe;
+    outline: 2px auto blue;
 }
 
 
@@ -911,7 +930,8 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
 
     margin: 0;
     padding: 0;
@@ -1074,6 +1094,15 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 }
 
 
+.btn.btn-slider:active::before {
+    background-color: #000;
+}
+
+.btn.btn-slider:active {
+    color: #f7e184;
+}
+
+
 /*Описание сервиса - Правый блок - Текст*/
 
 .service-description {
@@ -1085,10 +1114,14 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     list-style: none;
 }
 
+
+
+
 .warranty,
 .credit {
     display: none;
 }
+
 
 
 .service-description h2 {
@@ -1170,7 +1203,6 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 
 
 
-
 /*Блок Бренды*/
 
 .brands {
@@ -1182,10 +1214,18 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+        flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     justify-content: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     align-items: center;
-    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
 
     margin: 0;
     padding: 0;
@@ -1337,7 +1377,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
 
-     color: #fff;
+    color: #fff;
 }
 
 
@@ -1350,22 +1390,19 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     align-items: flex-start;
-
+    -webkit-box-align: start;
+    -ms-flex-align: start;
 
     margin-top: 65px;
-
     margin-bottom: 10px;
-
-
 }
 
 /*Верхний блок футера - Логотип Device*/
 
 .page-footer-logo {
     align-self: center;
-
-
-
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
 }
 
 
@@ -1374,19 +1411,18 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-
     align-items: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
 
     margin: 0;
     padding: 0;
-
 
     list-style: none;
 }
 
 .footer-user-navigation li:not(:first-child):not(.login-out) {
     margin-left: 42px;
-
 }
 
 
@@ -1396,8 +1432,6 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     font-size: 15px;
     font-weight: 300;
     line-height: 24px;
-
-
 
     opacity: .7;
     color: #fff;
@@ -1438,9 +1472,8 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     align-items: baseline;
-
-
-
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
 }
 
 
@@ -1451,7 +1484,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
     font-weight: 300;
-     line-height: 30px;
+    line-height: 30px;
 
     color: #fff;
 }
@@ -1469,13 +1502,12 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     align-items: center;
-
+    -webkit-box-align: center;
+    -ms-flex-align: center;
 
     width: 425px;
     margin: 0;
-
     padding: 0;
-
 
     list-style: none;
 }
@@ -1484,6 +1516,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 
 .footer-site-navigation a {
     display: inline-block;
+
     font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -1491,9 +1524,9 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 
     color: #fff;
 
+    vertical-align: middle;
     letter-spacing: 3.5px;
     text-transform: uppercase;
-    vertical-align: middle;
 }
 
 
@@ -1533,11 +1566,11 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
 
     margin-top: 47px;
-   margin-bottom: 65px;
-
-
+    margin-bottom: 65px;
 }
 
 /*Нижний блок футера - Линия*/
@@ -1607,12 +1640,9 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 
 /*Нижний блок футера - Логотип HTML Academy*/
 .bottom-footer .logo-academy {
-
     width: 100px;
+
     text-align: right;
-
-
-
 }
 
 .logo-academy a:hover {
@@ -1740,14 +1770,6 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
             box-shadow: -320px 0 0 0 #efecdf;
 }
 
-/*Блок Каталог*/
-
-
-
-
-
-
-
 
 /*Фильтр Каталога*/
 .header-filter,
@@ -1863,14 +1885,10 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 /*Позиционирование кнопки -Показать- для .btn*/
 .filter-button {
     position: relative;
-
-
 }
 
 .filter-button .btn {
-
     width: 200px;
-
 }
 
 
@@ -2135,6 +2153,8 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -ms-flexbox;
     display: flex;
     justify-content: flex-end;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
 
     margin: 0;
     margin-left: auto;
@@ -2172,29 +2192,35 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
         flex-wrap: wrap;
     -ms-flex-wrap: wrap;
 
-    width: 832px;
+    width: 760px;
     margin: 0;
     margin-top: 70px;
     padding: 0;
+    padding-left: 72px;
 
     list-style: none;
 }
 
-
 .catalog-item {
     position: relative;
 
-    margin-bottom: 47px;
-    margin-left: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+
+    margin-bottom: 45px;
 }
 
-
-.catalog-item:nth-child(odd) {
-    margin-left: 72px;
-}
 
 .catalog-item:last-child,
 .catalog-item:nth-last-child(2) {
@@ -2202,8 +2228,107 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 }
 
 
+.catalog-item-image {
+    width: 360px;
+    height: 380px;
+    margin-bottom: 32px;
+}
+.catalog-item-image::before {
+    position: absolute;
 
-/*Карточка товара*/
+    display: block;
+
+    width: 360px;
+    height: 380px;
+
+    opacity: 0;
+    background-color: #eee;
+
+    content: " ";
+}
+
+
+.catalog-item-image:hover::before {
+    opacity: .7;
+}
+
+.catalog-item-image:hover .btn-cart,
+.catalog-item-image:hover .btn-compare {
+    opacity: 1;
+}
+
+
+
+
+/*Кнопки на изображении товара*/
+.btn-cart {
+    position: absolute;
+    top: -210px;
+    left: 80px;
+
+    display: block;
+
+    width: 200px;
+
+    opacity: 0;
+}
+
+
+.btn-cart:focus {
+    z-index: 25;
+
+    opacity: 1;
+    outline: 1px dotted black;
+    background-color: #f0c52e;
+}
+
+
+.btn-cart:active {
+    outline: none;
+}
+
+
+.btn-compare {
+    position: absolute;
+    top: 220px;
+    left: 102px;
+
+    width: 160px;
+
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+
+    opacity: 0;
+    color: rgba(0, 0, 0, .5);
+    border: none;
+    background: none;
+
+    cursor: pointer;
+    letter-spacing: .13px;
+}
+
+.btn-compare:hover,
+.btn-compare:focus {
+    z-index: 25;
+
+    opacity: 1;
+    color: rgba(0, 0, 0, 1);
+}
+
+
+.btn-compare:focus {
+    outline: 1px dotted black;
+}
+
+
+.btn-compare:active {
+    color: rgba(0, 0, 0, .2);
+    outline: none;
+}
+
+
 .catalog-item-description {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2211,15 +2336,9 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     justify-content: space-between;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    align-items: baseline;
-    -webkit-box-align: baseline;
-    -ms-flex-align: baseline;
-
-    padding-top: 27px;
-    padding-bottom: 0;
 }
 
-.catalog-item h1 {
+.catalog-item-description h1 {
     width: 260px;
     margin: 0;
     padding: 0;
@@ -2234,10 +2353,20 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     letter-spacing: .21px;
 }
 
-.catalog-item p {
-    width: 80px;
+.catalog-item-description a {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+
+    color: #000;
+
+    text-decoration: none;
+}
+
+.catalog-item-description p {
+    width: 100px;
     margin: 0;
-    padding: 0;
 
     font-family: "Gilroy", "Arial", sans-serif;
     font-size: 16px;
@@ -2247,122 +2376,21 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     color: #464646;
 
     text-align: right;
-    letter-spacing: .16px;
-}
-
-
-.catalog-item a {
-    color: #000;
 }
 
 
 
-.catalog-button {
-    position: absolute;
-    top: 0;
-
-    display: none;
-
-    width: 360px;
-    height: 380px;
-
-    background-color: rgba(238, 238, 238, .7);
-}
-
-
-
-
-
-.catalog-item:hover .catalog-button,
-.catalog-link-image:focus ~ .catalog-button {
-    display: block;
-
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-}
-
-
-
-.catalog-button:focus
-.btn-cart:focus {
-    border: 3px solid red;
-}
-
-
-
-.catalog-button:focus .btn-compare,
-.catalog-link-image:focus ~ .catalog-button .btn-cart {
-  z-index: 25;
-  opacity: 1;
-}
-
-
-
-
-/*Кнопки на изображении товара */
-.btn-cart {
-    position: absolute;
-    top: 175px;
-    left: 80px;
-
-    display: block;
-
-    width: 200px;
-
-
-}
-
-
-
-
-.btn-compare {
-    position: absolute;
-    top: 220px;
-    left: 102px;
-
-    font-family: "Open Sans", "Arial", sans-serif;
-    font-size: 13px;
-    font-weight: 300;
-    line-height: 20px;
-
-    opacity: .5;
-    color: #000;
-    border: none;
-    background: transparent;
-
-    letter-spacing: .13px;
-}
-
-.btn-compare:hover  {
-    opacity: 1;
-
-    cursor: pointer;
-}
-
-
-.btn-compare:active {
-    opacity: .2;
-    outline: none;
-}
-
-
-
-
-
-
-/* Маркер NEW на изображении товара */
+/* Маркер NEW на изображении товара*/
 .catalog-new {
     position: relative;
 }
 .catalog-new::before {
     position: absolute;
-    top: -338px;
+    top: 27px;
     right: 25px;
 
-    width: 59px;
-    height: 59px;
+    width: 58px;
+    height: 58px;
 
     font-family: "Gilroy", "Arial", sans-serif;
     font-size: 14px;
@@ -2376,7 +2404,13 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 
     content: "New";
     text-align: center;
+    letter-spacing: .21px;
     text-transform: uppercase;
+}
+
+
+.catalog-new:hover::before {
+    opacity: .2;
 }
 
 
@@ -2405,7 +2439,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 
 
 .pagination-item {
-    width: 39px;
+    width: 38px;
 
     text-align: center;
 }
@@ -2475,7 +2509,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 }
 
 
-.pagination-before a:hover,
+/*.pagination-before a:hover,*/
 .pagination-next a:hover {
     background-color: #d8d8d8;
 }
@@ -2739,6 +2773,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     border: none;
     background: none;
 
+    cursor: pointer;
     text-align: center;
     white-space: nowrap;
     letter-spacing: 3.42px;
@@ -2773,9 +2808,14 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 .btn:focus::before {
     height: 40px;
 }
+
+
+/*
 .btn:active::before {
     background-color: #000;
-}
+}*/
+
+
 .btn:active {
-    color: #f7e184;
+    color: rgba(0, 0, 0, .3);
 }

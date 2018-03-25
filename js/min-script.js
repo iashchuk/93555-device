@@ -1,0 +1,1 @@
+function openCatalog(){document.getElementById("product-menu").classList.toggle("catalog-open")}

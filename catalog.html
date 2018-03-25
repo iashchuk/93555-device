@@ -17,8 +17,7 @@
 						<form action="https://echo.htmlacademy.ru" method="get">
 							<label class="visually-hidden" for="site-search">Поиск по сайту</label>
 							<input class="field-search" type="search" name="search" id="site-search" placeholder="Поиск по сайту">
-							<label class="visually-hidden" for="button-search"><span>Найти</span></label>
-							<input class="button-search" type="button" name="btn-search" id="submit-search" value="Найти" tabindex="-1">
+							<button class="button-search" type="submit">Найти</button>
 						</form>
 						<ul class="user-menu">
 							<li><a class="login-link" href="#">Валентин Петухов</a></li>
@@ -142,10 +141,8 @@
 						<ul class="catalog-list">
 							<li class="catalog-item">
 								<article>
-									<a class="catalog-link-image" href="catalog-item.html">
+									<div class="catalog-item-image">
 										<img src="img/item-1.png" width="360" height="380" alt="Любительская селфи-палка">
-									</a>
-									<div class="catalog-button">
 										<button class="btn btn-cart" type="button">В корзину</button>
 										<button class="btn-compare" type="button">Добавить к сравнению</button>
 									</div>
@@ -157,11 +154,9 @@
 							</li>
 							<li class="catalog-item">
 								<article>
-									<a class="catalog-link-image" href="catalog-item.html">
+									<div class="catalog-item-image">
 										<img src="img/item-2.png" width="360" height="380" alt="Профессиональная селфи-палка">
-									</a>
-									<div class="catalog-button">
-										<a class="btn btn-cart" href="#">В корзину</a>
+										<button class="btn btn-cart" type="button">В корзину</button>
 										<button class="btn-compare" type="button">Добавить к сравнению</button>
 									</div>
 									<div class="catalog-item-description">
@@ -172,11 +167,9 @@
 							</li>
 							<li class="catalog-item">
 								<article>
-									<a class="catalog-link-image" href="catalog-item.html">
+									<div class="catalog-item-image">
 										<img src="img/item-3.png" width="360" height="380" alt="Непотопляемая селфи-палка">
-									</a>
-									<div class="catalog-button">
-										<a class="btn btn-cart" href="#">В корзину</a>
+										<button class="btn btn-cart" type="button">В корзину</button>
 										<button class="btn-compare" type="button">Добавить к сравнению</button>
 									</div>
 									<div class="catalog-item-description">
@@ -187,11 +180,9 @@
 							</li>
 							<li class="catalog-item">
 								<article>
-									<a class="catalog-link-image catalog-new" href="catalog-item.html">
+									<div class="catalog-item-image catalog-new">
 										<img src="img/item-4.png" width="360" height="380" alt="Селфи-палка Следуй за мной">
-									</a>
-									<div class="catalog-button">
-										<a class="btn btn-cart" href="#">В корзину</a>
+										<button class="btn btn-cart" type="button">В корзину</button>
 										<button class="btn-compare" type="button">Добавить к сравнению</button>
 									</div>
 									<div class="catalog-item-description">
@@ -202,8 +193,8 @@
 							</li>
 						</ul>
 						<ul class="pagination-list">
-							<li class="pagination-before"><a href="#">Назад</a></li>
-							<li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+							<li class="pagination-before"><a>Назад</a></li>
+							<li class="pagination-item pagination-item-current"><a>1</a></li>
 							<li class="pagination-item"><a href="#">2</a></li>
 							<li class="pagination-item"><a href="#">3</a></li>
 							<li class="pagination-next"><a href="#">Вперед</a></li>
