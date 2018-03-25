@@ -18,6 +18,7 @@ input[type="radio"].visually-hidden {
 
 
 
+
 /*Подключение шрифтов*/
 
 @font-face {
@@ -2571,7 +2572,6 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     bottom: 0;
     left: 0;
 
-    display: block;
 
     color: #000;
     background-repeat: repeat;
@@ -2604,15 +2604,16 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 /*Модальное окно - Напишите нам*/
 
 .modal-message {
-    top: 50%;
-    left: 50%;
-
-    display: none;
+       display: none;
 
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 960px;
-    margin-top: -280px;
+    height: 559px;
+
+    margin: auto;
+
+
     padding-top: 91px;
     padding-right: 100px;
     padding-bottom: 82px;
@@ -2620,9 +2621,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 
     background-color: #fff;
 
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+
 }
 
 
