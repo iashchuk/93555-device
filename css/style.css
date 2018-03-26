@@ -1083,23 +1083,32 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 }
 
 /*Перечень сервисов - Левый блок - Оформление ссылок*/
-.service-list .btn.current {
+
+
+.current.btn {
     padding-right: 118px;
 
     color: #f7e184;
     background: #000;
 }
 
-.service-list .btn.current::before {
+
+.warranty,
+.credit {
     display: none;
 }
 
 
-.btn.btn-slider:active::before {
+.current::before {
+    display: none;
+}
+
+
+.btn-slider:active::before {
     background-color: #000;
 }
 
-.btn.btn-slider:active {
+.btn-slider:active {
     color: #f7e184;
 }
 
@@ -1116,12 +1125,6 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 }
 
 
-
-
-.warranty,
-.credit {
-    display: none;
-}
 
 
 
@@ -2525,13 +2528,15 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 
 
 
+
+
+
+
+
+
+
+
 /* М-О-Д-А-Л-Ь-Н-Ы-Е   О-К-Н-А */
-
-
-
-
-
-
 
 
 /*Кнопка заыкрытия модальных окон*/
@@ -2564,14 +2569,120 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 }
 
 
+
+
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform: translateY(-1000px);
+                transform: translateY(-1000px);
+    }
+
+    70% {
+        -webkit-transform: translateY(600px);
+                transform: translateY(600px);
+    }
+
+    85% {
+        -webkit-transform: translateY(300px);
+                transform: translateY(300px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+
+
+
+@keyframes bounce {
+    0% {
+        -webkit-transform: translateY(-1000px);
+                transform: translateY(-1000px);
+    }
+
+    70% {
+        -webkit-transform: translateY(600px);
+                transform: translateY(600px);
+    }
+
+    85% {
+        -webkit-transform: translateY(300px);
+                transform: translateY(300px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+
+@-webkit-keyframes shake {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-10px);
+                transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px);
+    }
+}
+
+
+@keyframes shake {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-10px);
+                transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px);
+    }
+}
+
+
+
+
 .modal {
     position: fixed;
     z-index: 100;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
 
+    margin-top: -280px;
+    margin-left: -480px;
+    /* -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);*/
 
     color: #000;
     background-repeat: repeat;
@@ -2589,31 +2700,27 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: none;
 
     width: 960px;
-    height: 559px;
-    margin: auto;
+    height: 560px;
 
-    border: 1px dotted black;
     background-color: #f3f0e6;
     background-image: url("../img/map-big.jpg");
 }
 
 
-
+.modal-map iframe {
+    border: none;
+}
 
 
 /*Модальное окно - Напишите нам*/
 
 .modal-message {
-       display: none;
+    display: none;
 
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 960px;
-    height: 559px;
-
-    margin: auto;
-
-
+    height: 560px;
     padding-top: 91px;
     padding-right: 100px;
     padding-bottom: 82px;
@@ -2621,8 +2728,22 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 
     background-color: #fff;
 
+    -webkit-animation: bounce .7s;
 
+            animation: bounce .7s;
 }
+
+
+.modal-show {
+    display: block;
+}
+
+.modal-error {
+    -webkit-animation: shake .6s;
+            animation: shake .6s;
+}
+
+
 
 
 /*Форма Напишите нам*/
