@@ -1093,10 +1093,6 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 }
 
 
-.warranty,
-.credit {
-    display: none;
-}
 
 
 .current::before {
@@ -1114,6 +1110,15 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 
 
 /*Описание сервиса - Правый блок - Текст*/
+
+
+
+.slide-warranty,
+.slide-credit {
+    display: none;
+}
+
+
 
 .service-description {
     width: 460px;
