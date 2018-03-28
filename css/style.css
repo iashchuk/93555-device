@@ -1,8 +1,5 @@
-
 /*Б15. Единообразное написание и форматирование кода в HTML, CSS и JavaScript*/
 /*HTML, CSS, JS - для форматирования использован Tab*/
-
-
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -146,11 +143,13 @@ a {
 /*Поиск по сайту - Поле ввода запроса*/
 
 .user-navigation .field-search {
+    box-sizing: border-box;
     width: 355px;
     min-height: 49px;
-    padding-top: 9px;
+    padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 39px;
+    padding-right: 20px;
     font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
     font-weight: 300;
@@ -2150,7 +2149,6 @@ input[id="slide-three"]:focus~.slide-controls label[for="slide-three"] {
 .pagination-item.pagination-item-current a {
     opacity: 1;
 }
-
 
 .pagination-next a:hover {
     background-color: #d8d8d8;
