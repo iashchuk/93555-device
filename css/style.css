@@ -1,6 +1,3 @@
-/*Б15. Единообразное написание и форматирование кода в HTML, CSS и JavaScript*/
-/*HTML, CSS, JS - для форматирования использован Tab*/
-
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
