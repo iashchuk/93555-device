@@ -49,10 +49,16 @@ input[type="radio"].visually-hidden {
     src: url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
 }
 
+
+html {
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
     color: #000;
+    overflow-x: hidden;
 }
 
 a {
