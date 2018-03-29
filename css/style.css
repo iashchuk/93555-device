@@ -18,7 +18,6 @@ input[type="radio"].visually-hidden {
     font-family: "Gilroy";
     font-weight: 300;
     font-style: normal;
-
     src: url("../fonts/gilroylight.woff2") format("woff2"), url("../fonts/gilroylight.woff") format("woff");
 }
 
@@ -26,7 +25,6 @@ input[type="radio"].visually-hidden {
     font-family: "Gilroy";
     font-weight: 400;
     font-style: normal;
-
     src: url("../fonts/gilroyextrabold.woff2") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
@@ -34,7 +32,6 @@ input[type="radio"].visually-hidden {
     font-family: "Gilroy";
     font-weight: 800;
     font-style: normal;
-
     src: url("../fonts/gilroyextrabold.woff2") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
@@ -42,7 +39,6 @@ input[type="radio"].visually-hidden {
     font-family: "Open Sans";
     font-weight: 400;
     font-style: normal;
-
     src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") formmat("woff");
 }
 
@@ -50,7 +46,6 @@ input[type="radio"].visually-hidden {
     font-family: "Open Sans";
     font-weight: 300;
     font-style: normal;
-
     src: url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
 }
 
@@ -1319,19 +1314,25 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    justify-content: flex-end;
     align-items: flex-start;
     -webkit-box-align: start;
     -ms-flex-align: start;
     flex-wrap: wrap;
 
+    width: 565px;
     margin: 0;
     padding: 0;
 
     list-style: none;
 }
 
-.footer-user-navigation li:not(:first-child):not(.login-out) {
-    margin-left: 42px;
+.footer-user-navigation li {
+    margin-left: 43px;
+}
+
+.footer-user-navigation .user-out {
+    margin-left: 20px;
 }
 
 .footer-user-navigation a {
@@ -1352,14 +1353,11 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     opacity: .3;
 }
 
-.footer-user-navigation .login-out {
-    margin-right: 0;
-    margin-left: -20px;
-
+.footer-user-navigation .footer-login-out {
     opacity: .3;
 }
 
-/*"Эффекты при наведении и нажатии -> ?? Как  по-другому поменять цвет иконки*/
+/*Эффекты при наведении и нажатии*/
 
 .footer-user-navigation .login-link::before {
     background-image: url("../img/user-yellow.png");
@@ -1993,6 +1991,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     align-items: baseline;
     -webkit-box-align: baseline;
     -ms-flex-align: baseline;
+    flex-wrap: wrap;
 
     width: 760px;
     padding: 23px 0 23px 72px;
@@ -2331,6 +2330,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     -ms-flex-align: center;
     flex-wrap: wrap;
 
+    width: 760px;
     margin: 0;
     margin-bottom: 75px;
     margin-left: 72px;
