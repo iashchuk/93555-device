@@ -2351,6 +2351,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: flex;
     justify-content: center;
     align-items: baseline;
+    flex-wrap: wrap;
 
     margin: 0;
     padding: 0;
