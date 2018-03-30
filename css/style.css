@@ -2,13 +2,17 @@
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
     position: absolute;
+
     overflow: hidden;
     clip: rect(0 0 0 0);
+
     width: 1px;
     height: 1px;
     margin: -1px;
     padding: 0;
+
     border: 0;
+
     white-space: nowrap;
 }
 
@@ -18,6 +22,7 @@ input[type="radio"].visually-hidden {
     font-family: "Gilroy";
     font-weight: 300;
     font-style: normal;
+
     src: url("../fonts/gilroylight.woff2") format("woff2"), url("../fonts/gilroylight.woff") format("woff");
 }
 
@@ -25,6 +30,7 @@ input[type="radio"].visually-hidden {
     font-family: "Gilroy";
     font-weight: 400;
     font-style: normal;
+
     src: url("../fonts/gilroyextrabold.woff2") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
@@ -32,6 +38,7 @@ input[type="radio"].visually-hidden {
     font-family: "Gilroy";
     font-weight: 800;
     font-style: normal;
+
     src: url("../fonts/gilroyextrabold.woff2") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
@@ -39,6 +46,7 @@ input[type="radio"].visually-hidden {
     font-family: "Open Sans";
     font-weight: 400;
     font-style: normal;
+
     src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") formmat("woff");
 }
 
@@ -46,6 +54,7 @@ input[type="radio"].visually-hidden {
     font-family: "Open Sans";
     font-weight: 300;
     font-style: normal;
+
     src: url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
 }
 
@@ -56,9 +65,11 @@ html {
 
 body {
     overflow-x: hidden;
+
     min-width: 1200px;
     margin: 0;
     padding: 0;
+
     color: #000;
 }
 
@@ -109,12 +120,12 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    align-items: flex-start;
+    justify-content: space-between;
     -webkit-box-align: start;
     -ms-flex-align: start;
+    align-items: flex-start;
 
     width: 1040px;
     margin-bottom: 32px;
@@ -130,16 +141,16 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
-    justify-content: flex-start;
+        flex-direction: row;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    align-items: center;
+    justify-content: flex-start;
     -webkit-box-align: center;
     -ms-flex-align: center;
+    align-items: center;
 
     width: 440px;
     min-height: 49px;
@@ -264,14 +275,14 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    align-items: center;
+    justify-content: flex-start;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    flex-wrap: wrap;
+    align-items: center;
     -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     width: 500px;
     margin: 0;
@@ -374,11 +385,11 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    align-items: baseline;
     -webkit-box-align: baseline;
     -ms-flex-align: baseline;
-    flex-wrap: wrap;
+    align-items: baseline;
     -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     width: 1040px;
     margin: 0;
@@ -443,8 +454,8 @@ a {
     left: -60px;
 
     display: none;
-    flex-wrap: wrap;
     -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     width: 1040px;
     margin: 0;
@@ -580,9 +591,9 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
+    justify-content: space-between;
 
     min-height: 510px;
 }
@@ -748,6 +759,7 @@ a {
 
 .slide-description table {
     border-collapse: collapse;
+
     text-align: left;
 }
 
@@ -760,7 +772,9 @@ a {
     font-size: 36px;
     font-weight: 300;
     line-height: 44px;
+
     color: #000;
+
     letter-spacing: .36px;
 }
 
@@ -773,7 +787,9 @@ a {
     font-size: 13px;
     font-weight: 300;
     line-height: 16px;
+
     color: #464646;
+
     letter-spacing: .13px;
 }
 
@@ -809,6 +825,7 @@ input[id="slide-three"]:checked ~ .slide-item-second {
     width: 24px;
     height: 24px;
     margin-right: 5px;
+
     font-size: 0;
 
     background: url("../img/slider-button-empty.svg") no-repeat;
@@ -848,8 +865,8 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
     -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     margin: 0;
     padding: 0;
@@ -871,18 +888,22 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     position: relative;
 
     display: block;
+
     width: 160px;
 
     font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
+
     color: #000;
+
     letter-spacing: .18px;
 }
 
 .category-item::before {
     display: block;
+
     width: 160px;
     height: 160px;
     margin-bottom: 33px;
@@ -898,6 +919,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     left: 0;
 
     display: block;
+
     width: 160px;
     height: 160px;
 
@@ -965,9 +987,9 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
+    justify-content: flex-start;
 }
 
 /*Перечень сервисов - Левый блок */
@@ -981,12 +1003,15 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     padding-bottom: 44px;
 
     border-right: 7px solid black;
+
     list-style: none;
+
     text-align: center;
 }
 
 .service-list li {
     margin-bottom: 24px;
+
     text-align: left;
 }
 
@@ -1070,6 +1095,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     left: 558px;
 
     display: block;
+
     width: 200px;
     height: 200px;
 
@@ -1112,18 +1138,18 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
-    justify-content: flex-start;
+        flex-direction: row;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    align-items: center;
+    justify-content: flex-start;
     -webkit-box-align: center;
     -ms-flex-align: center;
-     flex-wrap: wrap;
+    align-items: center;
     -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     margin: 0;
     padding: 0;
@@ -1168,9 +1194,9 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
+    justify-content: space-between;
 
     margin-bottom: 82px;
 }
@@ -1272,13 +1298,13 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    justify-content: flex-start;
+        flex-direction: column;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
+    justify-content: flex-start;
 
     color: #fff;
 }
@@ -1289,12 +1315,12 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    align-items: flex-start;
+    justify-content: space-between;
     -webkit-box-align: start;
     -ms-flex-align: start;
+    align-items: flex-start;
 
     margin-top: 65px;
     margin-bottom: 10px;
@@ -1303,9 +1329,9 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 /*Верхний блок футера - Логотип Device*/
 
 .page-footer-logo {
-    align-self: center;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
+    align-self: center;
 }
 
 /*Верхний блок футера - Пользовательское меню*/
@@ -1315,9 +1341,9 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -ms-flexbox;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-start;
     -webkit-box-align: start;
     -ms-flex-align: start;
+    align-items: flex-start;
     flex-wrap: wrap;
 
     width: 565px;
@@ -1377,12 +1403,12 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    align-items: baseline;
+    justify-content: space-between;
     -webkit-box-align: baseline;
     -ms-flex-align: baseline;
+    align-items: baseline;
 }
 
 /*Средний блок футера - Адрес*/
@@ -1404,12 +1430,12 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    align-items: center;
+    justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
+    align-items: center;
     flex-wrap: wrap;
 
     width: 425px;
@@ -1463,12 +1489,12 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    align-items: center;
+    justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
+    align-items: center;
 
     margin-top: 47px;
     margin-bottom: 65px;
@@ -1486,9 +1512,9 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
+    justify-content: center;
     flex-wrap: wrap;
 
     width: 160px;
@@ -1614,6 +1640,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     right: -24px;
 
     display: block;
+
     width: 7px;
     height: 7px;
 
@@ -1651,15 +1678,16 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 /*Блок Фильтр*/
 
 .catalog-filter {
     position: relative;
+
     background: #efefef;
 }
 
@@ -1689,6 +1717,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     line-height: 24px;
 
     color: #000;
+
     vertical-align: middle;
     letter-spacing: 3.6px;
     text-transform: uppercase;
@@ -1817,6 +1846,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 
 .range-controls .scale {
     height: 2px;
+
     background: #d7dcde;
 }
 
@@ -1981,12 +2011,12 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    align-items: baseline;
+    justify-content: flex-start;
     -webkit-box-align: baseline;
     -ms-flex-align: baseline;
+    align-items: baseline;
     flex-wrap: wrap;
 
     width: 760px;
@@ -2012,6 +2042,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 .header-sort {
     width: 160px;
     margin-right: 40px;
+
     word-wrap: break-word;
 }
 
@@ -2019,8 +2050,8 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
     -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     width: 460px;
     margin: 0;
@@ -2065,11 +2096,11 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
-    flex-wrap: wrap;
+    justify-content: flex-end;
     -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     width: 80px;
     margin: 0;
@@ -2109,11 +2140,11 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    flex-wrap: wrap;
+    justify-content: space-between;
     -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     width: 760px;
     margin: 0;
@@ -2130,10 +2161,10 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
+        flex-direction: column;
 
     margin-bottom: 45px;
 }
@@ -2180,6 +2211,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     left: 80px;
 
     display: block;
+
     width: 200px;
 
     opacity: 0;
@@ -2239,9 +2271,9 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .catalog-item-description h1 {
@@ -2324,12 +2356,12 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    align-items: center;
+    justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
+    align-items: center;
     flex-wrap: wrap;
 
     width: 760px;
@@ -2620,11 +2652,11 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-        flex-wrap: wrap;
+    justify-content: space-between;
     -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     margin: 0;
     padding: 0;
