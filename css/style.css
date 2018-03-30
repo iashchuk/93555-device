@@ -1720,10 +1720,6 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     content: " ";
 }
 
-.header-sort {
-    margin-left: 3px;
-}
-
 .filter {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -2015,7 +2011,7 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
 
 .header-sort {
     width: 160px;
-    margin-right: 38px;
+    margin-right: 40px;
     word-wrap: break-word;
 }
 
