@@ -92,3 +92,40 @@ window.addEventListener("keydown", function (evt) {
         }
     }
 });
+
+
+// Слайдер Наши сервисы
+
+let slideIndex = 1;
+let slides = document.getElementsByClassName("service-item");
+let buttonsWrap = document.querySelector(".service-list");
+let buttons = document.getElementsByClassName("service-btn");
+
+function showSlides(index) {
+
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("current");
+        slides[i].style.display = "none";
+    };
+
+    slides[slideIndex - 1].style.display = "block";
+    buttons[slideIndex - 1].classList.add("current");
+}
+
+
+function currentSlide(index) {
+    showSlides(slideIndex = index)
+}
+
+showSlides(slideIndex);
+
+
+buttonsWrap.addEventListener("click", function(event) {
+  event.preventDefault();
+    for (let i = 0; i < buttons.length + 1; i++) {
+        if (event.target.classList.contains("service-btn") &&
+            event.target == buttons[i-1]) {
+            currentSlide(i);
+        }
+    }
+});

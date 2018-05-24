@@ -1028,20 +1028,20 @@ input[id="slide-three"]:focus ~ .slide-controls label[for="slide-three"] {
     display: none;
 }
 
-.btn-slider.btn:active::before {
+.service-btn.btn:active::before {
     background-color: #000;
 }
 
-.btn-slider.btn:active {
+.service-btn.btn:active {
     color: #f7e184;
 }
 
 /*Описание сервиса - Правый блок - Текст*/
 
-.slide-warranty,
+/*.slide-warranty,
 .slide-credit {
     display: none;
-}
+}*/
 
 .service-description {
     position: relative;
